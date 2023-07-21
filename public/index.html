@@ -1,20 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Bootstrap Assignment</title>
 
-    <!-- CSS RESET -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css" />
+    <title>Bootstrap Assignment</title>
     <link rel="stylesheet" href="/assets/css/foobar.css" />
 
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-    <header> <p>Hello</p></header>
-    <main></main>
-    <footer></footer>
+
+    <!-- Overall container -->
+    <div class="container-fluid">
+        <section class="row mb-0">
+
+
+            <!-- SIDE BAR -->
+            <nav class="col-lg-2 sidebar d-flex flex-column flex-shrink-0">
+                <a class="d-inline-flex align-items-center  mb-5 mt-4 pt-1">
+                    <svg class="ms-3 mb-2" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
+                        fill="none">
+                        <circle cx="16" cy="16" r="16" fill="#b600ff" />
+                        <path
+                            d="M11 10C11 9.44772 11.4477 9 12 9H15.9905C18.2127 9 19.9333 9.60955 21.1524 10.8287C22.3841 12.0478 23 13.765 23 15.9803C23 18.2088 22.3841 19.9391 21.1524 21.1713C19.9333 22.3904 18.2127 23 15.9905 23H12C11.4477 23 11 22.5523 11 22V10Z"
+                            fill="url(#paint0_linear_584_285)" />
+                        <defs>
+                            <linearGradient id="paint0_linear_584_285" x1="11" y1="9" x2="23" y2="23"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white" stop-opacity="0.7" />
+                                <stop offset="1" stop-color="white" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <h3 class="text-gray ms-3">Dashboard Kits</h3>
+                </a>
+
+                <!-- Nav list -->
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-gray">
+                            <h3>Overview</h3>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-gray">
+                            <h3>Tickets</h3>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-gray">
+                            <h3>Ideas</h3>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-gray">
+                            <h3>Contacts</h3>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-gray">
+                            <h3>Agents</h3>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-gray">
+                            <h3>Articles</h3>
+                        </a>
+                    </li>
+                    <hr />
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-gray">
+                            <h3>Settings</h3>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-gray">
+                            <h3>Subscription</h3>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Modal trigger -->
+                        <a href="#" class="nav-link text-white btn-small btn-primary" data-toggle="modal"
+                            data-target="#myModal">
+                            <h3>Modal here</h3>
+                        </a>
+
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- MAIN PAGE container -->
+            <section class="col">
+
+                <!-- spacing -->
+                <div class="px-4">
+
+                    <!-- Header -->
+                    <header class="row">
+                        <nav
+                            class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                            <h2 class="fw-bold d-flex align-items-center my-2 my-lg-0 me-lg-auto">Overview</h2>
+                            <ul class="nav col-12 col-lg-auto my-2 justify-content-center align-items-center">
+                                <li>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 16 16" fill="none">
+                                            <g clip-path="url(#clip0_584_242)">
+                                                <circle cx="6.5" cy="6.5" r="5.75" stroke="#C5C7CD"
+                                                    stroke-width="1.5" />
+                                                <path d="M11 11L15 15" stroke="#C5C7CD" stroke-width="1.5"
+                                                    stroke-linecap="round" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_584_242">
+                                                    <rect width="16" height="16" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19"
+                                            viewBox="0 0 18 19" fill="none">
+                                            <path
+                                                d="M7.99999 19C9.10374 19 9.99905 18.1047 9.99905 17H6.00093C6.00093 18.1047 6.89624 19 7.99999 19ZM14.7309 14.3216C14.1272 13.6728 12.9975 12.6969 12.9975 9.5C12.9975 7.07188 11.295 5.12812 8.99937 4.65125V4C8.99937 3.44781 8.55187 3 7.99999 3C7.44812 3 7.00062 3.44781 7.00062 4V4.65125C4.70499 5.12812 3.00249 7.07188 3.00249 9.5C3.00249 12.6969 1.8728 13.6728 1.26905 14.3216C1.08155 14.5231 0.998429 14.7641 0.999991 15C1.00343 15.5125 1.40562 16 2.00312 16H13.9969C14.5944 16 14.9969 15.5125 15 15C15.0016 14.7641 14.9184 14.5228 14.7309 14.3216Z"
+                                                fill="#C5C7CD" />
+                                            <circle cx="13" cy="5" r="3.75" fill="#b600ff" stroke="#F7F8FC"
+                                                stroke-width="1.5" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="vr mt-2"></div>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link">
+                                        <h5 class="d-inline fw-semibold">Jones Ferdinand </h5>
+                                        <img class="rounded-circle border border-3 border-white"
+                                            src="./assets/images/m header.png" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </header>
+
+                    <!-- MAIN CONTENT -->
+                    <!-- Ticket Overview -->
+                    <article class="row text-center" id="ticket-overview">
+                        <div class="col-lg col-sm-6 boxed ">
+                            <h3 class="fw-bold mt-3 text-gray">Unresolved</h3>
+                            <h1 class="fw-bold">60</h1>
+                        </div>
+                        <div class="col-lg col-sm boxed">
+                            <h3 class="fw-bold mt-3 text-gray">Overdue</h3>
+                            <h1 class="fw-bold">16</h1>
+                        </div>
+                        <div class="col-lg col-sm-6 boxed">
+                            <h3 class="fw-bold mt-3 text-gray">Open</h3>
+                            <h1 class="fw-bold"> 43</h1>
+                        </div>
+                        <div class="col-lg col-sm boxed">
+                            <h3 class="fw-bold mt-3 text-gray">On hold</h3>
+                            <h1 class="fw-bold">64</h1>
+                        </div>
+                    </article>
+
+                    <!-- Today's trends -->
+                    <section class="row boxed align-items-center">
+
+                        <!-- Today's trends: Column1 -->
+                        <div id="trend-graph" class="col-md-7">
+                            <h3 class="fw-bold">Today's Trends</h3>
+
+                            <!-- Today/Yesterday -->
+                            <section class="row">
+                                <h6 class="col-sm-6">as of 25 May 2019, 09:41 PM</h6>
+                                <ul id="choose-date" class="col-sm-auto ms-auto">
+                                    <li class="list-inline-item">
+                                        <a>
+                                            <button class="btn btn-primary"></button>
+                                            <h6 class="text-gray d-inline">Today</h6>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a>
+                                            <button class="btn btn-secondary"></button>
+                                            <h6 class="text-gray d-inline">Yesterday</h6>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <img class="img-fluid w-100" src="./assets/images/full graph.png" alt="trend data graph">
+
+                        </div>
+
+                        <!-- Data: Column2 -->
+                        <section id="trend-data" class="col-md-5 text-center px-0 border-start">
+                            <ul class="list-group list-group-flush justify-content-between">
+                                <li class="list-group-item mt-3">
+                                    <h3 class="text-gray">Resolved</h3>
+                                    <h2 class="fw-bold mb-3">449</h2>
+                                </li>
+                                <li class="list-group-item mt-3">
+                                    <h3 class="text-gray">Received</h3>
+                                    <h2 class="fw-bold mb-3">426</h2>
+                                </li>
+                                <li class="list-group-item mt-3">
+                                    <h3 class="text-gray">Average first response time</h3>
+                                    <h2 class="fw-bold mb-3">33m</h2>
+                                </li>
+                                <li class="list-group-item mt-3">
+                                    <h3 class="text-gray">Average response time</h3>
+                                    <h2 class="fw-bold mb-3">3h 8m</h2>
+                                </li>
+                                <li class="list-group-item mt-3">
+                                    <h3 class="text-gray">Resolution within SLA</h3>
+                                    <h2 class="fw-bold">94%</h2>
+                                </li>
+                            </ul>
+                        </section>
+
+                    </section>
+
+                    <!-- Unresolved Tickets -->
+                    <article class="row">
+
+                        <section class="col-lg boxed">
+
+                            <section class="row align-items-center" id="ticket-heading">
+                                <h3 class="col-sm-6 fw-bold">Unresolved tickets</h3>
+                                <a class="col-sm-auto ms-auto">
+                                    <h5 class="">View Details</h5>
+                                </a>
+                                <h6 class="text-gray">Group: <span class="text-black">Support </span></h6>
+                            </section>
+
+
+                            <!-- List -->
+                            <ul class="list-group list-group-flush" id="unresolved-tickets">
+                                <li class="list-group-item p-0">
+                                    <section class="row mb-3">
+                                        <h5 class="col-sm-6 fw-semibold">Waiting on Feature Request</h5>
+                                        <span class="col-sm-auto ms-auto">
+                                            <h5 class="fw-semibold text-gray">4238</h5>
+                                        </span>
+                                    </section>
+                                </li>
+                                <li class="list-group-item p-0">
+                                    <section class="row mt-3">
+                                        <h5 class="col-sm-6 fw-semibold">Awaiting Customer Response</h5>
+                                        <span class="col-sm-auto ms-auto">
+                                            <h5 class="fw-semibold text-gray">1005</h5>
+                                        </span>
+                                    </section>
+                                </li>
+                                <li class="list-group-item p-0">
+                                    <section class="row mt-3">
+                                        <h5 class="col-sm-6 fw-semibold">Awaiting Developer Fix</h5>
+                                        <span class="col-sm-auto ms-auto">
+                                            <h5 class="fw-semibold text-gray">914</h5>
+                                        </span>
+                                    </section>
+                                </li>
+                                <li class="list-group-item p-0">
+                                    <section class="row mt-3 mb-0">
+                                        <h5 class="col-sm-6 fw-semibold">Pending</h5>
+                                        <span class="col-sm-auto ms-auto">
+                                            <h5 class="fw-semibold text-gray">281</h5>
+                                        </span>
+                                    </section>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <!-- TASKS -->
+                        <section class="col boxed">
+                            <!-- Heading -->
+                            <section class="row align-items-center" id="tasks-heading">
+                                <h3 class="col-sm-6 fw-bold">Tasks</h3>
+                                <a class="col-sm-auto ms-auto">
+                                    <h5 class="">View All</h5>
+                                </a>
+                                <h6 class="text-gray">Today</h6>
+                            </section>
+                            <!-- List -->
+
+
+                            <ul class="list-group list-group-flush" id="tasks">
+                                <li class="list-group-item p-0">
+                                    <section class="row mb-3">
+                                        <h5 class="col-sm-6 text-gray">Create New Task</h5>
+                                        <span class="col-sm-auto ms-auto">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <rect width="24" height="24" rx="8" fill="#F0F1F7" />
+                                                <path d="M12 7V17" stroke="#9FA2B4" stroke-width="2"
+                                                    stroke-linecap="round" />
+                                                <path d="M17 12L7 12" stroke="#9FA2B4" stroke-width="2"
+                                                    stroke-linecap="round" />
+                                            </svg>
+                                        </span>
+                                    </section>
+                                </li>
+                                <li class="list-group-item p-0">
+                                    <section class="row mb-3 align-items-center">
+                                        <label class="col-sm-6 d-flex gap-3 mt-3">
+                                            <input class="form-check-input flex-shrink-0 rounded-circle" type="checkbox"
+                                                value="" checked="">
+                                            <h5 class="fw-semibold mt-1">Finish ticket update</h5>
+                                        </label>
+                                        <span class="col-sm-auto ms-auto">
+                                            <button type="button"
+                                                class="btn btn-sm btn-warning mt-1 text-white">URGENT</button>
+                                        </span>
+                                    </section>
+                                    <section class="row mb-3 align-items-center">
+                                        <label class="col-sm-6 d-flex gap-3 mt-3">
+                                            <input class="form-check-input flex-shrink-0 rounded-circle" type="checkbox"
+                                                value="" checked="">
+                                            <h5 class="fw-semibold mt-1">Create new ticket example</h5>
+                                        </label>
+                                        <span class="col-sm-auto ms-auto">
+                                            <button type="button" class="btn btn-sm btn-success mt-1">NEW</button>
+                                        </span>
+                                    </section>
+                                    <section class="row mb-3 align-items-center">
+                                        <label class="col-sm-6 d-flex gap-3 mt-3">
+                                            <input class="form-check-input flex-shrink-0 rounded-circle" type="checkbox"
+                                                value="" checked="">
+                                            <h5 class="fw-semibold mt-1">Update ticket report</h5>
+                                        </label>
+                                        <span class="col-sm-auto ms-auto">
+                                            <button type="button"
+                                                class="btn btn-sm btn-dark mt-1 text-gray">DEFAULT</button>
+                                        </span>
+                                    </section>
+
+                                </li>
+                            </ul>
+                        </section>
+
+                    </article>
+
+                </div>
+            </section>
+        </section>
+    </div>
+
+    <aside class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <header class="modal-header">
+                    <h1 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Congratulations!</h1>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </header>
+
+                <div class="modal-body">
+                    You are the visitor no. <span class="fw-bold" style="color: red;">999 999 999</span>!
+                    Claim your prize now!
+                    <img class="img-fluid" src="/assets/images/notscam.png" />
+                </div>
+
+                <footer class="modal-footer">
+                    <button type="button" class="btn btn-danger">Claim here</button>
+                </footer>
+
+            </div>
+        </div>
+    </aside>
+
+    <!-- Bootstrap JavaScript-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>

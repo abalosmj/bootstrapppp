@@ -1,6 +1,184 @@
-$primary-color: purple;
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+:root{
+    --bs-success:#29CC97;
+}
+
+// colors
+$accent-color: #b600ff;
+$accent-light:#d98ff7;
+$bg-color: #F7F8FC;
+$black-color: #252733;
+$divider-color: #DFE0EB;
+
+// box border of rows
+@mixin container-style {
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid $divider-color;
+    padding: 30px;
+    // gap: 30px;
+}
+
+
+
+// BASE ----------------------------------------------------
+html{
+    font-size: 16px;
+}
+
+p{
+    margin: 0;
+}
+
+h1{
+    font-size: 40px;
+}
+h2{
+    font-size: 24px;
+}
+h3{
+    font-size: 19px;
+}
+h4{
+    font-size: 16px;
+}
+h5{
+    font-size: 14px;
+}
+
+h6{
+    font-size: 12px;
+}
+
+a{
+    text-decoration: none;
+    color: $accent-color;
+}
 
 body{
-    color: $primary-color;
+    font-size: 16px;
+    color: $black-color;
+    background-color: $bg-color;
+    font-family: 'Poppins', sans-serif;
+}
+
+// LAYOUT ----------------------------------------------------
+.row{
+    margin-bottom: 30px;
+}
+
+// row/col styles
+.boxed{
+    @include container-style;
+}
+
+// multiple columns
+section article{
+    gap: 30px;
+}
+
+// MODULES ----------------------------------------------------
+
+// sidebar
+.sidebar{
+    background-color: $black-color;
+    color: #A4A6B3;
+    padding: 0px;
+}
+
+.text-gray{
+    color: #9FA2B4;
+}
+
+.text-black{
+    color: $black-color;
+}
+
+.btn{
+    padding: 2px 12px ;
+}
+// graph column
+#trend-graph{
+    padding-right: 30px;
+}
+
+.active{
+    background-color: #9FA2B4!important;
+}
+
+.btn-gray{
+    background-color: gray;
+}
+
+.btn-warning{
+    background-color:#FEC400 ;
+    pointer-events: none;
+}
+
+.btn-success{
+    background-color: #29CC97;
+    border: none;
+    pointer-events: none;
+}
+.btn-dark{
+    background-color: $divider-color;
+    pointer-events: none;
 
 }
+.btn-secondary{
+    background-color:gray;
+    border: none;
+}
+.btn-primary{
+    background-color: $accent-color;
+    border: none;
+}
+header .nav-link{
+    color: rgb(147, 147, 147);
+}
+// STATES ----------------------------------------------------
+.nav-item:hover{
+    border-left: 2px solid $accent-color;
+}
+
+.nav-link:hover{
+    color: $accent-color;
+}
+.btn:hover{
+    background-color: $accent-light;
+}
+
+a:hover{
+    color: $accent-light;
+}
+input[type=checkbox]:checked{
+    background-color: #b600ff;
+}
+
+#ticket-overview .boxed:hover, #ticket-overview .boxed:active{
+    color: $accent-color;
+    border-radius: 8px;
+    outline: 2px solid $accent-color;
+}
+
+// MOBILE LAYOUT
+@media only screen and (max-width: 577px) {
+
+    #trend-data{
+        border: none!important;
+    }
+
+    header h2+ul{
+        display: none!important;
+    }
+
+    .nav{
+        display: none!important;
+    }
+
+  
+}
+
+
